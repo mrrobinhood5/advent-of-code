@@ -19,7 +19,8 @@ Each bit in the gamma rate can be determined by finding the most common bit in t
 10000
 11001
 00010
-01010```
+01010
+```
 
 Considering only the first bit of each number, there are five 0 bits and seven 1 bits. Since the most common bit is 1, the first bit of the gamma rate is 1.
 

@@ -3,6 +3,7 @@ with open('./input.txt') as f:
 
 n = raw_data.pop(0).split(',')
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 def format_raw(raw_data):
     d, t = [], []
@@ -31,6 +32,8 @@ def play_bingo(cards, numbers, flag=0):
 def checkrows(cards, numbers):
     ccard = []
 =======
+=======
+>>>>>>> 4e0f9f8fc5cbc6d35cb7efdef148921b7d2cd23f
 c, t = [], []
 
 for row in raw_data:
@@ -42,12 +45,16 @@ for row in raw_data:
 
 
 def play_bingo(cards, numbers):
+<<<<<<< HEAD
 >>>>>>> origin/master
+=======
+>>>>>>> 4e0f9f8fc5cbc6d35cb7efdef148921b7d2cd23f
     for number in numbers:
         for card in cards:
             for row in card:
                 if number in row:
                     card[card.index(row)][row.index(number)] = 'x'
+<<<<<<< HEAD
 <<<<<<< HEAD
                     ccard = [[card[j][i] for j in range(len(card))] for i in range(len(card[0]))]
                 if ['x']*5 in card or ['x']*5 in ccard:
@@ -62,6 +69,8 @@ def find_totals(card, number):
 print(f'Day 4, Part1: {find_totals(*play_bingo(format_raw(raw_data), n))}')
 print(f'Day 4, Part2: {find_totals(*play_bingo(format_raw(raw_data), n, flag = 1))}')
 =======
+=======
+>>>>>>> 4e0f9f8fc5cbc6d35cb7efdef148921b7d2cd23f
                 if ['x'] * 5 in card:
                     return card, int(number)
 
@@ -73,5 +82,9 @@ def find_totals(card, number):
     return total * number
 
 # print(play_bingo(c, n))
+<<<<<<< HEAD
 # print(find_totals(*play_bingo(c, n)))
 >>>>>>> origin/master
+=======
+# print(find_totals(*play_bingo(c, n)))
+>>>>>>> 4e0f9f8fc5cbc6d35cb7efdef148921b7d2cd23f

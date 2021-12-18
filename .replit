@@ -1,2 +1,2 @@
 language = "python3"
-run = "main.py"
+run = "./2021/Day\ 5/solution.py"

@@ -22,13 +22,19 @@ class Solution
   end
 
   def solution2
-    data = @raw_data.join
-    clearing = /(?=don't\(\))(.*?)(?=do\(\))/
-    matching = /mul\((\d+),(\d+)\)/
-    filtered_data = data.gsub(clearing, "")
-    filtered_data.scan(matching).map do |a, b|
-      a.to_i * b.to_i
-    end.sum
+    @raw_data = @raw_data.join("\n")
+    clearing = /(?=don't\(\))(.*?)(?=do\(\))/m
+    @raw_data = @raw_data.gsub(clearing, "")
+    @raw_data.scan(/mul\((\d+),(\d+)\)/).map {|a, b| a.to_i * b.to_i}.sum
+
+
+
+    # data = @raw_data.join
+    # matching = /mul\((\d+),(\d+)\)/
+    # filtered_data = data.gsub(clearing, "")
+    # filtered_data.scan(matching).map do |a, b|
+    #   a.to_i * b.to_i
+    # end.sum
  
   end
 end
